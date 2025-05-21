@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Google Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- HTML Fa icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <!-- javascript -->
+    <script>
+        // navigation js
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    // Join Open js Function
+    function OpenJoin(){
+        let a = window.open("../join/","_Self");
+    }
+    // search
+    function myFunction(){
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("content");
+        li = ul.getElementsByTagName("table");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("h4")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+    <!-- style -->
+    <style>
+        *{
+            margin: 0px 0px;
+            font-family: 'Nunito', sans-serif;
+            box-sizing: border-box;
+        }
+/* --------------------------------------------mobile css ---------------------------------------------------------- */
+        /* full page container */
+        #page-container{
+            padding: 20px 20px;
+            align-items: left;
+            text-align: left;
+            width: 100%;
+        }
+        /* navigation drawer icon */
+        #navigation-menu-icon{
+            width: 25px;
+            height: 25px;
+        }
+        /* join btn */
+        #join-btn{
+            background-color: #1E90FF;
+            font-size: 15px;
+            text-align: center;
+            float: right;
+            padding: 7px 20px;
+            color: #fff;
+            border-radius: 5px;
+            /* width: 80px; */
+        }
+        /* Page heading */
+        #page-heading{
+            margin-top: 50px;
+            font-size: 13px;
+        }
+        /* search css */
+        #search-box-container{
+            margin-top: 50px;
+        }
+        #myInput {
+            background-image: url('https://i.ibb.co/JdjX2Rp/search-1.png');
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            outline: none;
+        }
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #myUL table h4 {
+            border: 1px solid #ddd;
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block
+        }
+        #myUL table h4:hover:not(.header) {
+            background-color: #eee;
+        }
+        /* Main content */
+        #content{
+            padding-top: 20px;
+        }
+        /* blog things container */
+        table{
+            margin-top: 10px;
+        }
+        #thumbnail{
+            width: 150px;
+            height: 100px;
+            border-radius: 10px;
+        }
+        #blog-details-information{
+            padding-left: 10px;
+        }
+        #blog-heading{
+            font-weight: bold;
+            color: #0A0A0A;
+        }
+        #blog-category{
+            font-size: 12px;
+            margin-top: 10px;
+            background-color: #eeeded;
+            color: #0a0a0a;
+            margin-right: 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        #blog-category-container{
+            padding-top: 0px;
+        }
+        /* link decoration */
+        a{
+            text-decoration: none;
+        }
+        /* Side Navigation css */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60p1E90FFx;
+            border-right: 1px solid #d3d3d3;
+        }
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #0a0a0a;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .closebtn{
+            display: inline-block;
+        }
+        #sidnav-element{
+            font-size: medium;
+            background-color: #f1f1f1;
+            padding: 15px 15px;
+            margin: 10px 10px;
+            border-radius: 5px;
+        }
+        .inline{
+            display: inline-block;
+            overflow: auto;
+        }
+        .in-co{
+            display: inline-block;
+        }
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+        @media screen and (min-width: 500px) and (max-width: 1000px){
+            #page-container{
+                width: 70%;
+            }
+        }
+        @media screen and (min-width: 1001px){
+            #page-container{
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ---------------------mobile page------------------------- -->
+    <center>
+    <div id="page-container">
+        <!-- mobile navigation icon -->
+        <img src="https://cdn-icons-png.flaticon.com/128/3945/3945664.png" id="navigation-menu-icon" onclick="openNav()" alt="navigation-drawer-icon">
+        <!-- mobile Join Btn -->
+        <span id="join-btn" onclick="OpenJoin()">Join</span>
+        <!-- mobile Page Heading -->
+        <div id="page-heading"><h1>About</h1></div>
+        <!-- Content -->
+        <div id="content">
+            <center>
+                <img src="https://img.freepik.com/free-vector/about-us-concept-illustration_114360-669.jpg?size=626&ext=jpg&ga=GA1.1.2072565789.1670381060&semt=sph" width="50%" height="auto" alt="">
+            </center>
+            <br><br>
+    <h3 style="text-align: center;">Welcome To <span id="W_Name1">Detailinfo.Online</span></h3>
+    <p><span id="W_Name2">Detailinfo.Online</span> is a Professional <span id="W_Type1">Blogging</span> Platform. Here we will provide you only interesting content, which you will like very much. We're dedicated to providing you the best of <span id="W_Type2">Blogging</span>, with a focus on dependability and <span id="W_Spec">Providing Verified and Easy to read Content</span>. We're working to turn our passion for <span id="W_Type3">Blogging</span> into a booming <a href="https://www.blogearns.com/2021/05/free-about-us-page-generator.html" rel="do-follow" style="color: inherit; text-decoration: none;">online website</a>. We hope you enjoy our <span id="W_Type4">Blogging</span> as much as we enjoy offering them to you.</p>
+<p>I will keep posting more important posts on my Website for all of you. Please give your support and love.</p>
+<p style="font-weight: bold; text-align: center;">Thanks For Visiting Our Site<br><br>
+<span style="color: blue; font-size: 16px; font-weight: bold; text-align: center;">Have a nice day!</span></p>
+    
+        </div>
+    </div>
+    </center>
+    <!-- Side navigation Drawer Elements -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <br><br><br>
+        <a href="../" id="sidnav-element">Home</a>
+        <a href="../category" id="sidnav-element">Category</a>
+        <a href="https://www.youtube.com/channel/UCSQH5cVUPq_E9PQVnm8PFZQ" id="sidnav-element">YouTube</a>
+        <a href="https://www.instagram.com/detailinfo.online/" id="sidnav-element">Instagram</a>
+        <a href="https://www.quora.com/profile/Detailinfo-Online?q=detailinfo%20onli" id="sidnav-element">Quora</a>
+        <a href="../about" id="sidnav-element">About</a>
+        <a href="../privacy" id="sidnav-element">Privacy</a>
+        <a href="../contact" id="sidnav-element">Contact</a>
+      </div>
+</body>
+</html>
